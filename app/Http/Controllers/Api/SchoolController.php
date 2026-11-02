@@ -15,7 +15,9 @@ class SchoolController extends Controller
     {
         $schools = School::where('is_active', true)
             ->orderBy('name')
-            ->get(['id', 'name', 'domain', 'api_base_url', 'logo_url']);
+            ->get(['id', 'name', 'domain', 'api_base_url', 'logo_url'])
+            // has_api_key es interno del panel: la app solo necesita estos campos.
+            ->each->setAppends([]);
 
         return response()->json(['schools' => $schools]);
     }
