@@ -13,7 +13,31 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Inter', ...defaultTheme.fontFamily.sans],
+                display: ['Comfortaa', ...defaultTheme.fontFamily.sans],
+            },
+            colors: {
+                // Paleta de marca: cambiar aquí para re-colorear todo el panel.
+                brand: {
+                    50: '#eef4ff',
+                    100: '#dae6ff',
+                    200: '#bdd3ff',
+                    300: '#90b6ff',
+                    400: '#5c8dfd',
+                    500: '#3766f9',
+                    600: '#2146ee',
+                    700: '#1934db',
+                    800: '#1b2db1',
+                    900: '#1c2c8b',
+                    950: '#141c54',
+                },
+                ink: {
+                    900: '#0b1230',
+                    800: '#121a3f',
+                },
+            },
+            maxWidth: {
+                content: '1100px',
             },
         },
     },

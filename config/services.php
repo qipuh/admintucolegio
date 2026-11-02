@@ -35,4 +35,9 @@ return [
         ],
     ],
 
+    // Consulta de /api/v1/integrador/* en cada colegio (tucolegio).
+    'integrador' => [
+        'verify_ssl' => env('INTEGRADOR_VERIFY_SSL', true),
+    ],
+
 ];

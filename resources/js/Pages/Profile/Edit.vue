@@ -16,40 +16,28 @@ defineProps({
 </script>
 
 <template>
-    <Head title="Profile" />
+    <Head title="Mi perfil" />
 
     <AuthenticatedLayout>
         <template #header>
-            <h2
-                class="text-xl font-semibold leading-tight text-gray-800 dark:text-gray-200"
-            >
-                Profile
-            </h2>
+            <h1 class="font-display text-2xl font-bold text-slate-900 sm:text-3xl">Mi perfil</h1>
+            <p class="mt-1 text-sm text-slate-500">Administra los datos y la seguridad de tu cuenta.</p>
         </template>
 
-        <div class="py-12">
-            <div class="mx-auto max-w-7xl space-y-6 sm:px-6 lg:px-8">
-                <div
-                    class="bg-white p-4 shadow sm:rounded-lg sm:p-8 dark:bg-gray-800"
-                >
-                    <UpdateProfileInformationForm
-                        :must-verify-email="mustVerifyEmail"
-                        :status="status"
-                        class="max-w-xl"
-                    />
-                </div>
+        <div class="space-y-6">
+            <div class="card p-6 sm:p-8">
+                <UpdateProfileInformationForm
+                    :must-verify-email="mustVerifyEmail"
+                    :status="status"
+                />
+            </div>
 
-                <div
-                    class="bg-white p-4 shadow sm:rounded-lg sm:p-8 dark:bg-gray-800"
-                >
-                    <UpdatePasswordForm class="max-w-xl" />
-                </div>
+            <div class="card p-6 sm:p-8">
+                <UpdatePasswordForm />
+            </div>
 
-                <div
-                    class="bg-white p-4 shadow sm:rounded-lg sm:p-8 dark:bg-gray-800"
-                >
-                    <DeleteUserForm class="max-w-xl" />
-                </div>
+            <div class="card border-rose-100 p-6 sm:p-8">
+                <DeleteUserForm />
             </div>
         </div>
     </AuthenticatedLayout>
